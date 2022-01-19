@@ -36,7 +36,10 @@ Car& Car::operator=(Car const& o) {
   backseatDoors = o.getBackseatDoors();
   return *this;
 }                                                                          
-                 
+Car::~Car() {
+  delete[] manufacturer;
+  delete[] model;
+}                
 
 char const* Car::getManufacturer() const {
   return manufacturer;
