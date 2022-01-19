@@ -10,13 +10,14 @@ Car::Car() {
   zeroToSixtyNs = 0;
   headonDragCoeff = 0;
   horsepower = 0;
-  DoorKind doorP = None;
-  backseatDoors = doorP;
+  backseatDoors = None;
   seatCount = 0;
 
 }
 
 Car::Car(char const* const manufacturerName, char const* const modelName, PerformanceStats perf, uint8_t numSeats, DoorKind backseatDoorDesign) {
+  manufacturer = NULL;
+  model = NULL;
   manufacturerChange(manufacturerName);//f
   modelNameChange(modelName);
   reevaluateStats(perf);
