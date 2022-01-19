@@ -23,7 +23,15 @@ Car::Car(char const* const manufacturerName, char const* const modelName, Perfor
   backseatDoors = backseatDoorDesign;
   seatCount = numSeats;
 }
-
+Car::Car(Car const& o) {
+	manufacturer = NULL;
+	model = NULL;
+        manufacturerChange(o.getManufacturer());
+        modelNameChange(o.getModel());
+        reevaluateStats(o.getStats());
+        seatCount = o.getSeatCount();
+	backseatDoors = o.getBackseatDoors();
+}
 Car& Car::operator=(Car const& o) {
   if(&o == this) {
     return *this;
