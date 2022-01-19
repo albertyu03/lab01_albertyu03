@@ -7,12 +7,12 @@
 Car::Car() {
   manufacturer = NULL;
   model = NULL;
-  zeroToSixtyNs = '0';
-  headonDragCoeff = '0';
-  horsepower = '0';
+  zeroToSixtyNs = 0;
+  headonDragCoeff = 0;
+  horsepower = 0;
   DoorKind doorP = None;
   backseatDoors = doorP;
-  seatCount = '0';
+  seatCount = 0;
 
 }
 
