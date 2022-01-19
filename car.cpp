@@ -78,3 +78,7 @@ void Car::recountSeats(uint8_t newSeatCount) {
 void Car::reexamineDoors(DoorKind newDoorKind) {
   backseatDoors = newDoorKind;
 }
+
+int main() {
+  cout << "hi";
+}
